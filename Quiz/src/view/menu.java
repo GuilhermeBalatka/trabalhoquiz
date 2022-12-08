@@ -20,7 +20,6 @@ public class menu extends javax.swing.JFrame {
         label1 = new java.awt.Label();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        botao_historico = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         botao_ranking = new javax.swing.JButton();
         botao_jogar1 = new javax.swing.JButton();
@@ -33,14 +32,6 @@ public class menu extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("QUIZ");
-
-        botao_historico.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
-        botao_historico.setText("Histórico de Partidas");
-        botao_historico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botao_historicoActionPerformed(evt);
-            }
-        });
 
         jButton4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jButton4.setText("Sair");
@@ -79,10 +70,9 @@ public class menu extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(178, 178, 178)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botao_ranking, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(botao_historico, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botao_jogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(186, Short.MAX_VALUE))
         );
@@ -93,13 +83,11 @@ public class menu extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(botao_jogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(botao_historico, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addComponent(botao_ranking, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+                .addGap(117, 117, 117))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -134,12 +122,6 @@ public class menu extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_botao_jogarActionPerformed
-
-    private void botao_historicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botao_historicoActionPerformed
-        historico frame = new historico();
-        frame.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_botao_historicoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,7 +159,6 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton botao_historico;
     private javax.swing.JButton botao_jogar1;
     private javax.swing.JButton botao_ranking;
     private javax.swing.JButton jButton4;

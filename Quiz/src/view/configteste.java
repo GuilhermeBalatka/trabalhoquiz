@@ -8,7 +8,7 @@ import controller.Quiz;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import model.DAO.PartidaDAO;
-import model.DAO.Pergunta;
+import model.BO.Pergunta;
 
 
 

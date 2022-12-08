@@ -1,6 +1,7 @@
 
 package model.DAO;
 
+import model.BO.Pergunta;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,6 +24,7 @@ public class PartidaDAO {
     private float porcentagem_acertos;
     private String nome;
     private int total_perguntas_requesicoes;
+    
 
   
     
@@ -48,7 +50,15 @@ public class PartidaDAO {
         return total_perguntas_requesicoes;
     }
 
-  
+    public boolean PreVerificar(String alternativa_respondida, String alternativa_correta){
+        if(alternativa_respondida.equals(alternativa_correta)){
+            return true;
+        }
+        return false;
+    }
+    
+    
+    
     public void CriarListaPerguntas(){
         String comandoSQL = "select * from pergunta where area = '"+this.area+"' and dificuldade = '"+this.dificuldade+"'";
         ResultSet rs = null;
@@ -67,6 +77,7 @@ public class PartidaDAO {
         }
     }
     
+
     public Pergunta RetornarPergunta(){
         Random random = new Random();
         int numero_pergunta; //gerar numero aleatorio interio entra 0 e tamanha da lista de perguntas - 1
@@ -79,7 +90,7 @@ public class PartidaDAO {
     }
     
     public int VereficarPergunta(String alternativa_respondida, String alternativa_correta){
-        if(alternativa_respondida.equals(alternativa_correta)){
+        if(this.PreVerificar(alternativa_respondida, alternativa_correta)){
             this.total_acertos++;
         }
         this.total_perguntas_repondidas++;
@@ -88,7 +99,7 @@ public class PartidaDAO {
     }
     
     public void SalvarPartida(){
-        String comandoInserirJogador = "insert into jogador(nome_jogador) values ('"+this.nome+"');";
+        String comandoInserirJogador = "insert into jogador(nome_jogador, maximo_pontos) values ('"+this.nome+"', "+this.total_acertos+");";
         String comandoInserirPartida = "insert into partida(id_jogador, area, dificuldade, total_acertos, total_perguntas) values ((select count(1) from jogador),'"+this.area+"','"+this.dificuldade+"',"+this.total_acertos+","+this.total_perguntas_requesicoes+");";
         //String comandoInserirPartida = "insert into jogador(nome_jogador) values ('"+this.nome+"');";
         

@@ -5,8 +5,9 @@
 package view;
 
 import com.sun.xml.internal.ws.api.ha.StickyFeature;
+import java.awt.Color;
 import model.DAO.PartidaDAO;
-import model.DAO.Pergunta;
+import model.BO.Pergunta;
 
 
 /**
@@ -18,7 +19,7 @@ public class questao extends javax.swing.JFrame {
     private PartidaDAO partida = configteste.partida;
     private Pergunta pergunta = partida.RetornarPergunta();
     private String altenativaEscolhida = pergunta.getAlternativa_a();
-    
+    private int acao = 0;
     
     
     
@@ -37,7 +38,7 @@ public class questao extends javax.swing.JFrame {
         
     }
 
-  
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,6 +57,7 @@ public class questao extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         titulo = new javax.swing.JTextArea();
+        correcao = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,22 +107,29 @@ public class questao extends javax.swing.JFrame {
         titulo.setRows(5);
         jScrollPane1.setViewportView(titulo);
 
+        correcao.setFont(new java.awt.Font("Leelawadee UI", 0, 24)); // NOI18N
+        correcao.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        correcao.setOpaque(true);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(227, 227, 227))
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idAlternativaB)
-                    .addComponent(idAlternativaA)
-                    .addComponent(idAlternativaC)
-                    .addComponent(idAlternativaD))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(72, 72, 72)
+                        .addComponent(correcao, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 537, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(idAlternativaB)
+                            .addComponent(idAlternativaA)
+                            .addComponent(idAlternativaC)
+                            .addComponent(idAlternativaD))))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -128,17 +137,23 @@ public class questao extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40)
-                .addComponent(idAlternativaA)
-                .addGap(18, 18, 18)
-                .addComponent(idAlternativaB)
-                .addGap(18, 18, 18)
-                .addComponent(idAlternativaC)
-                .addGap(18, 18, 18)
-                .addComponent(idAlternativaD)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(idAlternativaA)
+                        .addGap(18, 18, 18)
+                        .addComponent(idAlternativaB)
+                        .addGap(18, 18, 18)
+                        .addComponent(idAlternativaC)
+                        .addGap(18, 18, 18)
+                        .addComponent(idAlternativaD)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(correcao, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(39, 39, 39))))
         );
 
         pack();
@@ -161,16 +176,31 @@ public class questao extends javax.swing.JFrame {
     }//GEN-LAST:event_idAlternativaDActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        if(this.partida.VereficarPergunta(this.altenativaEscolhida, this.pergunta.getResposta_certa())< partida.getTotal_perguntas_requesicoes()){
-            questao frame = new questao();
-            frame.setVisible(true);
-        }else{
-            this.partida.SalvarPartida();
-            finalQuiz frame = new finalQuiz();
-            frame.setVisible(true);
+        if(this.acao==0){
+            if(partida.PreVerificar(this.altenativaEscolhida, this.pergunta.getResposta_certa())){
+                this.correcao.setText("Acertou!");
+                this.correcao.setBackground(Color.green);
+            }else{
+                this.correcao.setText("Errou!");
+                this.correcao.setBackground(Color.red);
+            }
+            this.idAlternativaA.setEnabled(false);
+            this.idAlternativaB.setEnabled(false);
+            this.idAlternativaC.setEnabled(false);
+            this.idAlternativaD.setEnabled(false);
+            this.acao = 1;
+        }else if(this.acao==1){
+            if(this.partida.VereficarPergunta(this.altenativaEscolhida, this.pergunta.getResposta_certa())< partida.getTotal_perguntas_requesicoes()){
+                questao frame = new questao();
+                frame.setVisible(true);
+            }else{
+                this.partida.SalvarPartida();
+                finalQuiz frame = new finalQuiz();
+                frame.setVisible(true);
+            }
+            this.dispose();           
         }
         
-        this.dispose();
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     /**
@@ -210,6 +240,7 @@ public class questao extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup altenativas;
+    private javax.swing.JLabel correcao;
     private javax.swing.JRadioButton idAlternativaA;
     private javax.swing.JRadioButton idAlternativaB;
     private javax.swing.JRadioButton idAlternativaC;

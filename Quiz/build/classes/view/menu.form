@@ -54,10 +54,9 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" alignment="0" min="-2" pref="236" max="-2" attributes="0"/>
                       <Component id="jButton4" min="-2" pref="236" max="-2" attributes="0"/>
+                      <Component id="jLabel2" alignment="0" min="-2" pref="236" max="-2" attributes="0"/>
                       <Component id="botao_ranking" min="-2" pref="236" max="-2" attributes="0"/>
-                      <Component id="botao_historico" min="-2" pref="236" max="-2" attributes="0"/>
                       <Component id="botao_jogar1" min="-2" pref="236" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="186" max="32767" attributes="0"/>
@@ -71,13 +70,11 @@
                   <Component id="jLabel2" min="-2" pref="46" max="-2" attributes="0"/>
                   <EmptySpace pref="33" max="32767" attributes="0"/>
                   <Component id="botao_jogar1" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="botao_historico" min="-2" pref="42" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="botao_ranking" min="-2" pref="43" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jButton4" min="-2" pref="43" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -91,17 +88,6 @@
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="QUIZ"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="botao_historico">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Comic Sans MS" size="14" style="0"/>
-            </Property>
-            <Property name="text" type="java.lang.String" value="Hist&#xf3;rico de Partidas"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botao_historicoActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
