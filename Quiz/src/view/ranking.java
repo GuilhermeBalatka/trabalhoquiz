@@ -19,6 +19,8 @@ public class ranking extends javax.swing.JFrame {
      */
     public ranking() {
         initComponents();
+         this.setLocationRelativeTo(null);
+         this.setResizable(false);
         
                                                          
         RankingDAO posicao = new RankingDAO();
@@ -55,6 +57,11 @@ public class ranking extends javax.swing.JFrame {
         Voltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 102, 102));
+
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 2, 2, 2, new java.awt.Color(102, 0, 153)));
+        jScrollPane1.setFont(new java.awt.Font("Hashed Browns", 0, 12)); // NOI18N
 
         ranking.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -84,11 +91,12 @@ public class ranking extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(ranking);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Hashed Browns", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Ranking");
 
-        Voltar.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
+        Voltar.setBackground(new java.awt.Color(255, 102, 102));
+        Voltar.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         Voltar.setText("Voltar");
         Voltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

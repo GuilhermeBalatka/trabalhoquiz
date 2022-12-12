@@ -3,18 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/DAO/PartidaDAO.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/BO/Questao.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/BO/Pergunta.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/controller/Quiz.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/view/ranking.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/DAO/RankingDAO.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/view/menu.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/view/questao.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/view/configteste.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/DAO/ConexaoBD.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/model/VO/ItemRanking.java</file>
-            <file>file:/C:/Users/Guilherme/Documents/NetBeansProjects/Quiz/src/view/finalQuiz.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/model/DAO/Pergunta.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/configteste.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/menu.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/model/DAO/PartidaDAO.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/ranking.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/historico.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/finalQuiz.java</file>
+            <file>file:/C:/Users/susu5/Documents/NetBeansProjects/trabalhoquiz-main/Quiz/src/view/questao.java</file>
         </group>
     </open-files>
 </project-private>

@@ -4,7 +4,7 @@
  */
 package view;
 
-import com.sun.xml.internal.ws.api.ha.StickyFeature;
+
 import java.awt.Color;
 import model.DAO.PartidaDAO;
 import model.BO.Pergunta;
@@ -25,6 +25,8 @@ public class questao extends javax.swing.JFrame {
     
     public questao() {
         initComponents();
+         this.setLocationRelativeTo(null);
+         this.setResizable(false);
        
         //Pergunta pergunta = new Pergunta();
         String tituloCompleto = this.pergunta.getTitulo();
@@ -62,6 +64,7 @@ public class questao extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         altenativas.add(idAlternativaA);
+        idAlternativaA.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
         idAlternativaA.setSelected(true);
         idAlternativaA.setText("A");
         idAlternativaA.addActionListener(new java.awt.event.ActionListener() {
@@ -71,6 +74,7 @@ public class questao extends javax.swing.JFrame {
         });
 
         altenativas.add(idAlternativaB);
+        idAlternativaB.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
         idAlternativaB.setText("B");
         idAlternativaB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,6 +83,7 @@ public class questao extends javax.swing.JFrame {
         });
 
         altenativas.add(idAlternativaC);
+        idAlternativaC.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
         idAlternativaC.setText("C");
         idAlternativaC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +92,7 @@ public class questao extends javax.swing.JFrame {
         });
 
         altenativas.add(idAlternativaD);
+        idAlternativaD.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
         idAlternativaD.setText("D");
         idAlternativaD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,6 +100,8 @@ public class questao extends javax.swing.JFrame {
             }
         });
 
+        jToggleButton1.setBackground(new java.awt.Color(0, 204, 204));
+        jToggleButton1.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
         jToggleButton1.setText("Proxima");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,7 +110,9 @@ public class questao extends javax.swing.JFrame {
         });
 
         titulo.setEditable(false);
+        titulo.setBackground(new java.awt.Color(204, 204, 204));
         titulo.setColumns(20);
+        titulo.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
         titulo.setLineWrap(true);
         titulo.setRows(5);
         jScrollPane1.setViewportView(titulo);
@@ -136,10 +146,10 @@ public class questao extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
+                        .addGap(51, 51, 51)
                         .addComponent(idAlternativaA)
                         .addGap(18, 18, 18)
                         .addComponent(idAlternativaB)
@@ -147,10 +157,10 @@ public class questao extends javax.swing.JFrame {
                         .addComponent(idAlternativaC)
                         .addGap(18, 18, 18)
                         .addComponent(idAlternativaD)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(correcao, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39))))
@@ -177,6 +187,7 @@ public class questao extends javax.swing.JFrame {
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         if(this.acao==0){
+            System.out.println(this.pergunta.getResposta_certa());
             if(partida.PreVerificar(this.altenativaEscolhida, this.pergunta.getResposta_certa())){
                 this.correcao.setText("Acertou!");
                 this.correcao.setBackground(Color.green);

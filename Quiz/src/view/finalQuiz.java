@@ -21,6 +21,8 @@ public class finalQuiz extends javax.swing.JFrame {
         initComponents();
         this.acertos.setText(Integer.toString(this.partida.getTotal_acertos()));
         this.perguntas.setText(Integer.toString(this.partida.getTotal_perguntas_requesicoes()));
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
         
     }
 
@@ -40,8 +42,10 @@ public class finalQuiz extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 204, 204));
 
-        jToggleButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jToggleButton1.setBackground(new java.awt.Color(255, 102, 102));
+        jToggleButton1.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jToggleButton1.setText("Voltar ao Menu");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,10 +53,15 @@ public class finalQuiz extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Hashed Browns", 0, 24)); // NOI18N
         jLabel1.setText("Acertos");
 
-        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        acertos.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
+
+        perguntas.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Hashed Browns", 0, 24)); // NOI18N
         jLabel4.setText("Perguntas");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -135,7 +144,8 @@ public class finalQuiz extends javax.swing.JFrame {
             }
         });
     }
-
+    
+  
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel acertos;
     private javax.swing.JLabel jLabel1;

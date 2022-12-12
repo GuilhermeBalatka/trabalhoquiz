@@ -10,6 +10,8 @@ public class menu extends javax.swing.JFrame {
     
     public menu() {
         initComponents();
+         this.setLocationRelativeTo(null);
+         this.setResizable(false);
     }
 
     
@@ -29,11 +31,14 @@ public class menu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 24)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("QUIZ");
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
-        jButton4.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("AL Nevrada Personal Use Only", 0, 36)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Questionados");
+
+        jButton4.setBackground(new java.awt.Color(255, 102, 102));
+        jButton4.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jButton4.setText("Sair");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -41,7 +46,8 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        botao_ranking.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        botao_ranking.setBackground(new java.awt.Color(204, 102, 255));
+        botao_ranking.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         botao_ranking.setText("Ranking");
         botao_ranking.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_ranking.setName(""); // NOI18N
@@ -52,7 +58,8 @@ public class menu extends javax.swing.JFrame {
             }
         });
 
-        botao_jogar1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        botao_jogar1.setBackground(new java.awt.Color(204, 102, 255));
+        botao_jogar1.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         botao_jogar1.setText("Jogar");
         botao_jogar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         botao_jogar1.setName(""); // NOI18N
@@ -79,15 +86,15 @@ public class menu extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addContainerGap(49, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
                 .addComponent(botao_jogar1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(botao_ranking, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(27, 27, 27)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+                .addGap(92, 92, 92))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

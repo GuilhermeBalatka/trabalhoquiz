@@ -4,7 +4,7 @@
  */
 package view;
 
-import controller.Quiz;
+
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import model.DAO.PartidaDAO;
@@ -25,6 +25,8 @@ public class configteste extends javax.swing.JFrame{
 
     public configteste() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
 
@@ -49,7 +51,14 @@ public class configteste extends javax.swing.JFrame{
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAutoRequestFocus(false);
+        setBackground(new java.awt.Color(0, 153, 153));
+        setForeground(new java.awt.Color(0, 153, 153));
 
+        nome_pessoa.setFont(new java.awt.Font("Hashed Browns", 0, 14)); // NOI18N
+        nome_pessoa.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 153, 153)));
+        nome_pessoa.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+        nome_pessoa.setSelectedTextColor(new java.awt.Color(0, 0, 0));
         nome_pessoa.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 nome_pessoaFocusGained(evt);
@@ -65,7 +74,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_dificuldade.add(radio_iniciante);
-        radio_iniciante.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        radio_iniciante.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         radio_iniciante.setSelected(true);
         radio_iniciante.setText("Iniciante");
         radio_iniciante.addActionListener(new java.awt.event.ActionListener() {
@@ -75,7 +84,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_dificuldade.add(radio_intermeduario);
-        radio_intermeduario.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        radio_intermeduario.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         radio_intermeduario.setText("Intermediário");
         radio_intermeduario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,7 +93,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_dificuldade.add(radio_dificil);
-        radio_dificil.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        radio_dificil.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         radio_dificil.setText("Difícil ");
         radio_dificil.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,15 +101,16 @@ public class configteste extends javax.swing.JFrame{
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Nível");
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Tema");
 
-        numero_pergunta.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        numero_pergunta.setBackground(new java.awt.Color(204, 204, 204));
+        numero_pergunta.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         numero_pergunta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Número de questões - 1", "Número de questões - 2", "Número de questões - 3", "Número de questões - 4", "Número de questões - 5", "Número de questões - 6", "Número de questões - 7", "Número de questões - 8", "Número de questões - 9", "Número de questões - 10" }));
         numero_pergunta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -108,12 +118,12 @@ public class configteste extends javax.swing.JFrame{
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Nome");
 
         grupo_tema.add(conhecimentos_gerais);
-        conhecimentos_gerais.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        conhecimentos_gerais.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         conhecimentos_gerais.setSelected(true);
         conhecimentos_gerais.setText("Conhecimentos Gerais");
         conhecimentos_gerais.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +133,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_tema.add(artes);
-        artes.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        artes.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         artes.setText("Artes");
         artes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +142,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_tema.add(historia);
-        historia.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        historia.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         historia.setText("História");
         historia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -141,7 +151,7 @@ public class configteste extends javax.swing.JFrame{
         });
 
         grupo_tema.add(geografia);
-        geografia.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        geografia.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         geografia.setText("Geografia");
         geografia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -149,7 +159,8 @@ public class configteste extends javax.swing.JFrame{
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 204, 204));
+        jButton1.setFont(new java.awt.Font("Hashed Browns", 0, 18)); // NOI18N
         jButton1.setText("Jogar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,37 +173,45 @@ public class configteste extends javax.swing.JFrame{
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(100, 100, 100)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(169, 169, 169)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(numero_pergunta, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                    .addComponent(radio_iniciante)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(radio_intermeduario)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(radio_dificil)))))
+                        .addComponent(conhecimentos_gerais)
+                        .addGap(18, 18, 18)
+                        .addComponent(artes)
+                        .addGap(18, 18, 18)
+                        .addComponent(historia)
+                        .addGap(18, 18, 18)
+                        .addComponent(geografia)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nome_pessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(conhecimentos_gerais)
-                                .addGap(18, 18, 18)
-                                .addComponent(artes)
-                                .addGap(18, 18, 18)
-                                .addComponent(historia)
-                                .addGap(18, 18, 18)
-                                .addComponent(geografia))
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(94, 94, 94))
+                        .addComponent(radio_iniciante)
+                        .addGap(71, 71, 71)
+                        .addComponent(radio_intermeduario)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(radio_dificil)))
+                .addContainerGap(94, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nome_pessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(211, 211, 211)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(numero_pergunta, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(136, 136, 136)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -201,18 +220,18 @@ public class configteste extends javax.swing.JFrame{
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nome_pessoa, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel1)
-                .addGap(36, 36, 36)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(radio_iniciante)
                     .addComponent(radio_intermeduario)
                     .addComponent(radio_dificil))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(numero_pergunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel2)
-                .addGap(18, 18, 18)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(artes)
                     .addComponent(historia)

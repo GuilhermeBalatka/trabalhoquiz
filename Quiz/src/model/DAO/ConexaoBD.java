@@ -13,7 +13,7 @@ public class ConexaoBD {
     private static final String driver = "com.mysql.cj.jdbc.Driver";
     private static final String url = "jdbc:mysql://localhost/quiz";
     private static final String usuario = "root";
-    private static final String senha = "root";
+    private static final String senha = "batman";
     
     
    
